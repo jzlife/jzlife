@@ -1,0 +1,106 @@
+{
+	"pages": [
+		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "极致生活"
+			}
+		},
+		{
+			"path": "pages/menu/index",
+			"style": {
+				"navigationBarTitleText": "菜单"
+			}
+		},
+		{
+			"path": "pages/index/location",
+			"style": {
+				"navigationBarTitleText": "选择收货地址"
+			}
+		},
+		{
+			"path": "pages/order/index",
+			"style": {
+				"navigationBarTitleText": "订单"
+			}
+		},
+		{
+			"path": "pages/shoppingcart/index",
+			"style": {
+				"navigationBarTitleText": "购物车"
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/order/bukuan",
+			"style": {
+				"navigationBarTitleText": "补款"
+			}
+		}
+        ,{
+            "path" : "pages/order/waitingGetGoods/waitingGetGoods",
+            "style" : {
+				"navigationBarTitleText": "等待取件"
+			}
+        }
+        ,{
+            "path" : "pages/order/GetingGoods/GetingGoods",
+            "style" : {
+				"navigationBarTitleText": "取件中"
+			}
+        }
+        ,{
+            "path" : "pages/order/waitingShip/waitingShip",
+            "style" : {
+				"navigationBarTitleText": "等待配送"
+			}
+        }
+        ,{
+            "path" : "pages/order/sendingGoods/sendingGoods",
+            "style" : {
+				"navigationBarTitleText": "送件中"
+			}
+        }
+        ,{
+            "path" : "pages/order/pay/pay",
+            "style" : {
+				"navigationBarTitleText": "支付"
+			}
+        }
+        ,{
+            "path" : "pages/order/finished/finished",
+            "style" : {}
+        }
+    ],
+	"tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+        "pagePath": "pages/index/index",
+		// "iconPath": "static/image/icon_component.png",
+  //       "selectedIconPath": "static/image/icon_component_HL.png",
+        "text": "首页"
+    }, {
+        "pagePath": "pages/menu/index",
+        "text": "菜单"
+    }, {
+        "pagePath": "pages/order/index",
+        "text": "订单"
+    }, {
+        "pagePath": "pages/shoppingcart/index",
+        "text": "购物车"
+    }, {
+        "pagePath": "pages/my/index",
+        "text": "我的"
+    }]
+}
+			
+}
