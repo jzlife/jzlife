@@ -95,7 +95,24 @@
 			</view>
 			<view class="zengGao" style="height: 100rpx;"></view>
 		</section>
-		
+		<section class="Nav" v-show="showDones">
+			<view class="DoneTopNumber_Status">
+				<view class="DoneTopNumber">配送订单:xdjd1543548723</view>
+				<view class="DoneTopStatus">已完成</view>
+			</view>
+			<view class="DoneTopAllMsgs">
+				<view class="DoneTopName_Msgs">
+					<view class="DoneTopName">翡翠城店(NO.1000)</view>
+					<view class="DoneTopN_Msgs">衣物清洁等,共1次服务</view>
+				</view>
+				<view class="DoneTop_Time">2019-07-12 12:43</view>
+				<view class="DoneTop_Price">￥10</view>
+				<view class="DoneTopBtns">
+					<view class="DoneBtns_Again" @click="ChooseAgain">再来一单</view>
+					<view class="DoneBtns_Talk" @click="ChooseAgain">评价</view>
+				</view>
+			</view>
+		</section>
 	</view>
 </template>
 
@@ -301,6 +318,11 @@
 						url:'../order/sendingGoods/sendingGoods'
 					})
 				}
+			},
+			ChooseAgain() {
+				uni.navigateTo({
+					url:'../order/finished/finishedDetail/finishedDetail'
+				})
 			}
 		}
 	}
@@ -315,7 +337,7 @@
 	.orderTitle {
 		z-index: 50;
 		position: fixed;
-		top: 88rpx;
+		top: 80rpx;
 		left: 0rpx;
 		width: 100%;
 		height: 104rpx;
@@ -617,5 +639,108 @@
 		font-size: 28rpx;
 		background-color: white;
 		text-align: center;
+	}
+	/* 已完成 */
+	.Nav {
+		width: 100%;
+		height: 240rpx;
+		overflow: scroll;
+		border-top: 1rpx solid #808080;
+		margin-top: 114rpx;
+	}
+	.DoneTopNumber_Status {
+		width: 96%;
+		height: 60rpx;
+		margin-left: 2%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.DoneTopNumber {
+		width: 300rpx;
+		height: 60rpx;
+		line-height: 60rpx;
+		font-size: 24rpx;
+		color: #C7C6CD;
+	}
+	.DoneTopStatus {
+		width: 300rpx;
+		height: 60rpx;
+		line-height: 60rpx;
+		font-size: 24rpx;
+		color: #C7C6CD;
+		text-align: right;
+	}
+	.DoneTopAllMsgs {
+		position: relative;
+		width: 96%;
+		height: 180rpx;
+		margin-left: 2%;
+	}
+	.DoneTopName_Msgs {
+		position: absolute;
+		top: 10rpx;
+		left: 0rpx;
+		width: 360rpx;
+		height: 80rpx;
+	}
+	.DoneTopName {
+		width: 100%;
+		height: 50rpx;
+		line-height: 50rpx;
+		font-size: 32rpx;
+		font-weight: bold;
+	}
+	.DoneTopN_Msgs {
+		width: 100%;
+		height: 30rpx;
+		line-height: 30rpx;
+		font-size: 24rpx;
+		font-weight: bold;
+	}
+	.DoneTop_Time {
+		position: absolute;
+		top: 10rpx;
+		right: 0rpx;
+		height: 30rpx;
+		width: 300rpx;
+		color: #C7C6CD;
+		text-align: right;
+		font-size: 24rpx;
+	}
+	.DoneTop_Price {
+		position: absolute;
+		top: 108rpx;
+		left: 0rpx;
+		width: 100rpx;
+		height: 60rpx;
+		line-height: 60rpx;
+		font-size: 32rpx;
+		font-weight: bold;
+	}
+	.DoneTopBtns {
+		position: absolute;
+		top: 108rpx;
+		right: 0rpx;
+		width: 300rpx;
+		height: 60rpx;
+		/* border: 1rpx solid black; */
+		display: flex;
+		justify-content: space-between;
+	}
+	.DoneBtns_Again {
+		width: 150rpx;
+		height: 60rpx;
+		line-height: 60rpx;
+		text-align: center;
+		font-size: 32rpx;
+		border: 1rpx solid #C7C6CD;
+	}
+	.DoneBtns_Talk {
+		width: 120rpx;
+		height: 60rpx;
+		line-height: 60rpx;
+		text-align: center;
+		font-size: 32rpx;
+		border: 1rpx solid #C7C6CD;
 	}
 </style>

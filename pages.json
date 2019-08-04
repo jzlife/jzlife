@@ -75,7 +75,28 @@
         }
         ,{
             "path" : "pages/order/finished/finished",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "已完成"
+			}
+        }
+        ,{
+            "path" : "pages/order/finished/finishedDetail/finishedDetail",
+            "style" : {
+				"navigationBarTitleText": "已完成详情页"
+			}
+        }
+        ,{
+            "path" : "pages/order/finished/finishedDetail/evaluation/evaluation",
+            "style" : {
+				"navigationBarTitleText": "评价页面"
+			}
+        }
+        
+        ,{
+            "path" : "pages/shoppingcart/jieSuan/jieSuan",
+            "style" : {
+				"navigationBarTitleText": "结算页面"
+			}
         }
     ],
 	"tabBar": {
