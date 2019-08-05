@@ -2,7 +2,7 @@
 	<view class="tall">
 		<view class="menu">
 			<view class="banner">
-				<swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration">
+				<swiper class="swiper" :indicator-dots="indicatorDots" circular="true" :autoplay="autoplay" :interval="interval" :duration="duration">
 					<swiper-item v-for="(item, index) in adList" :key="index">
 						<a :href="item.url">
 							<image :src="item.picture" mode="scaleToFill"></image>
@@ -24,11 +24,11 @@
 		<view class="msgsShow">
 			<view class="msgsLeft">
 				<view class="msgsLCh1" v-for="(item,index) in goodsList" :key="index" :class="{category_active:categroy_id == item.id}"
-				 @click="chooseClass(item.id,item.tag)">{{item.name}}</view>
+				 @click="chooseClass(item.id)">{{item.name}}</view>
 			</view>
-			<scroll-view scroll-y="true" scroll-into-view="tag" scroll-with-animation="true" class="msgsRight">
-				<view class="msgsRCh1" v-for="(item,index) in goodsList" :key="index" :id="item.tag">
-					<view class="msgsRCh1NAddress">
+			<scroll-view :scroll-into-view="toView" scroll-y scroll-with-animation="true" class="msgsRight">
+				<view class="msgsRCh1" v-for="(item,index) in goodsList" :key="index">
+					<view class="msgsRCh1NAddress" :id="'inToView'+item.id">
 						<view class="msgsRCh1Name">{{item.name}}</view>
 						<view class="msgsLine"></view>
 					</view>
@@ -335,18 +335,15 @@
 				chooseGuiGe: false, //显示组件
 				count: 1, //选择数量
 				name:'',
-				tag:'clothes',
+				toView:'inToView1',
 			}
 		},
 		methods: {
-			chooseClass(id,index) {
+			chooseClass(id) {
 				this.categroy_id = id
-				this.tag = index
+				this.toView = 'inToView'+ id
 			},
-			// scroll(e) {
-			// 	this.scrollTop = parseInt(e.detail.scrollTop)
-			// 	
-			// },
+			
 			subNum() {
 				this.count--
 				if (this.count <= 0) {
@@ -378,23 +375,23 @@
 
 	.menu {
 		width: 100%;
-		height: 360rpx;
+		height: 330rpx;
 		background-color: #007AFF;
 	}
 
 	.banner {
-		height: 360rpx;
+		height: 330rpx;
 		background: #BBBBBB;
 	}
 
 	a {
 		display: inline-block;
 		width: 100%;
-		height: 360rpx;
+		height: 330rpx;
 	}
 
 	.swiper {
-		height: 360rpx;
+		height: 330rpx;
 	}
 
 	image {
@@ -473,13 +470,13 @@
 	}
 
 	.msgsRight {
-		overflow-y: scroll;
+		/* overflow-y: scroll; */
 		width: 70%;
-		height: 100%;
+		height: 760rpx;
 	}
 
 	.msgsRCh1 {
-		position: relative;
+		/* position: relative; */
 		width: 94%;
 		height: auto;
 		/* height: 83px; */
@@ -489,7 +486,7 @@
 	}
 	
 	.msgsRCh1NAddress {
-		position: relative;
+		/* position: relative; */
 		width: 100%;
 		border-top: 2rpx solid #B2B2B2;
 		height: 60rpx;
@@ -505,10 +502,11 @@
 	
 	.msgsLine{
 		position: absolute;
-		right: -16rpx;
+		right: -23rpx;
 		width: 68%;
-		border-top: 1rpx solid #B2B2B2;
-		top: 29rpx;
+		border: 1rpx solid #B2B2B2;
+		/* margin-top: 29rpx; */
+		margin-top: -26rpx;
 	}
 	
 	.msgsRCh1Goods {
@@ -614,7 +612,7 @@
 		bottom: 10rpx;
 		left: 10rpx;
 		width: 80%;
-		height: 10rpx;
+		height: 100rpx;
 		/* border: 1px solid black; */
 	}
 
@@ -648,7 +646,7 @@
 		font-size: 28rpx;
 		height: 81rpx;
 		margin-top: 20rpx;
-		border: 1rpx solid #6D6D72;
+		border: 1rpx solid #bbb;
 		width: 94%;
 		margin-left: 3%;
 	}
@@ -676,7 +674,7 @@
 		height: 360rpx;
 		margin-top: 20rpx;
 		margin-left: 3%;
-		border: 1rpx solid #6D6D72;
+		border: 1rpx solid #bbb;
 		font-size: 28rpx;
 	}
 
@@ -701,7 +699,7 @@
 	}
 
 	.Detial_Ch1 {
-		width: 128rpx;
+		width: 110rpx;
 		height: 56rpx;
 		text-align: center;
 		line-height: 56rpx;
@@ -714,7 +712,7 @@
 
 	/* 详情展示部分 */
 	.Detial_MsgsMore {
-		border: 1rpx solid black;
+		border: 1rpx solid #bbb;
 		width: 100%;
 		height: 360rpx;
 		margin-top: 20rpx;
@@ -751,8 +749,9 @@
 		position: absolute;
 		bottom: 0rpx;
 		width: 100%;
+		background: white;
 		height: 176rpx;
-		border-top: 1rpx solid #6D6D72;
+		border-top: 1rpx solid #BBBBBB;
 	}
 
 	.chooseGoodsTalk {

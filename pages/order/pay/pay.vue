@@ -4,7 +4,10 @@
 			<image class="NavImgs" src="../../../static/images/wx.png" mode=""></image>
 			<view class="NavName">微信支付</view>
 			<!-- <input id="NavInput" type="" value="" /> -->
-			<input type="radio" id="NavInput" value="" />
+			<!-- <input type="radio" id="NavInput" value="" /> -->
+			<label class="checkbox" id="NavInput">
+				<checkbox value="" checked="true" />
+			</label>
 		</view>
 		<view class="Nav">
 			<image class="NavImgs" src="../../../static/images/yue.png" mode=""></image>
@@ -12,15 +15,22 @@
 			<view class="NavTuijian">
 				<image src="../../../static/images/tuijian.png" mode=""></image>
 			</view>
-			<input id="NavInput" type="radio" value="" />
+			<label class="checkbox" id="NavInput">
+				<checkbox value="" />
+			</label>
 		</view>
 		<view class="Nav">
 			<image class="NavImgs" src="../../../static/images/zfb.png" mode=""></image>
 			<view class="NavName">支付宝支付</view>
-			<input id="NavInput" type="radio" value="" />
+			<label class="checkbox" id="NavInput">
+				<checkbox value="" />
+			</label>
 		</view>
 		<view class="Zhifu">
-			<input type="radio" id="Zhifuinput" value="" />
+			<!-- <input type="radio" id="Zhifuinput" value="" /> -->
+			<label class="checkbox" id="Zhifuinput">
+				<checkbox value="" />
+			</label>
 			<view class="aboutMsgs">我已阅读并同意
 				<text>支付协议</text>
 			</view>
@@ -84,13 +94,12 @@
 		width: 50rpx;
 		height: 50rpx;
 	}
-	#NavInput[type = 'radio'] {
+	#NavInput {
 		position: absolute;
 		top: 40rpx;
 		right: 20rpx;
 		width: 50rpx;
 		height: 50rpx;
-		border: 1rpx solid black;
 		/* border: none; */
 		/* border-radius: 50%; */
 	}
@@ -104,10 +113,8 @@
 		position: absolute;
 		width: 40rpx;
 		height: 40rpx;
-		border: 1rpx solid #C7C6CD;
-		border-radius: 50% 50%;
-		top: 10rpx;
-		left: 46rpx;
+		top: 2rpx;
+		left: 30rpx;
 	}
 	.aboutMsgs {
 		position: absolute;

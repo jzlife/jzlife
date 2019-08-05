@@ -98,6 +98,18 @@
 				"navigationBarTitleText": "结算页面"
 			}
         }
+        ,{
+            "path" : "pages/shoppingcart/jieSuan/preferentialCart/preferentialCart",
+            "style" : {
+				"navigationBarTitleText": "卡券"
+			}
+        }
+        ,{
+            "path" : "pages/shoppingcart/jieSuan/preferentialCart/adjustCart/adjustCart",
+            "style" : {
+				"navigationBarTitleText": "调整卡券"
+			}
+        }
     ],
 	"tabBar": {
     "color": "#7A7E83",

@@ -10,12 +10,11 @@
 			<view class="TopImgs">
 				<view class="TopImgsName">补款图片</view>
 				<view class="TopImgsAll">
-					<image src="../../static/images/left.png" mode=""></image>
-					<image src="../../static/images/1.jpg" mode=""></image>
-					<image src="../../static/images/1.jpg" mode=""></image>
-					<image src="../../static/images/1.jpg" mode=""></image>
-					<image src="../../static/images/1.jpg" mode=""></image>
-					<image src="../../static/images/jiantou.png" mode=""></image>
+					<image class="showLeft" src="../../static/images/left.png" mode=""></image>
+					<view class="showImgs">
+						<image v-for="(item,index) in ImgsList" @click="showAllPicture()" :key="index" :src="item.link" mode=""></image>
+					</view>
+					<image class="showRight" src="../../static/images/jiantou.png" mode=""></image>
 				</view>
 				<view class="TopPrice">补款金额:10000元</view>
 				<view class="TopTiShi">提示:若有其它需求请及时联系管家/配送员</view>
@@ -66,13 +65,70 @@
 		</view>
 		<!-- 底部信息展示 -->
 		<view class="Footer">
-			<view class="True_Pirce">还需支付<view class="True_HowPrice">￥9</view></view>
+			<view class="True_Pirce">还需支付<view class="True_HowPrice">￥9</view>
+			</view>
 			<view class="ZhiFu_Btn">去支付</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	export default {
+		data() {
+			return {
+				ImgsList: [{
+					link: '../../static/images/1.jpg',
+					id: 1
+				}, {
+					link: '../../static/images/2.jpg',
+					id: 2
+				}, {
+					link: '../../static/images/3.jpg',
+					id: 3
+				},{
+					link: '../../static/images/2.jpg',
+					id: 4
+				}, {
+					link: '../../static/images/3.jpg',
+					id: 5
+				}, {
+					link: '../../static/images/1.jpg',
+					id: 6
+				}],
+				left: 0
+			}
+		},
+		methods: {
+			moveLeft() {
+				if (this.ImgsList.length > 4) {
+					this.left -= 108
+				} else {
+					this.left = 0
+				}
+				console.log("left",this.left)
+			},
+			moveRight() {
+				if(this.left != 0) {
+					this.left += 108
+				}else {
+					this.left = 0
+				}
+				console.log("right",this.left)
+			},
+			showAllPicture() {
+				var imgs = []
+				for(var j = 0;j<this.ImgsList.length;j++) {
+					imgs[j] = this.ImgsList[j].link
+				}
+				uni.previewImage({
+					urls:imgs
+				})
+			}
+		},
+		mounted() {
+
+		}
+	}
 </script>
 
 <style>
@@ -81,16 +137,19 @@
 		height: 100%;
 		background-color: white;
 	}
+
 	.bukuanTop {
 		width: 96%;
 		margin-left: 2%;
 	}
+
 	.TopStatus_Thank {
 		width: 50%;
 		height: 100rpx;
 		margin-left: 25%;
 		padding-top: 36rpx;
 	}
+
 	.TopStatus {
 		width: 100%;
 		height: 50rpx;
@@ -99,6 +158,7 @@
 		font-size: 30rpx;
 		font-weight: bold;
 	}
+
 	.TopThank {
 		width: 100%;
 		height: 40rpx;
@@ -107,6 +167,7 @@
 		font-size: 20rpx;
 		font-weight: bold;
 	}
+
 	.TopBeiZhu {
 		width: 100%;
 		height: 24rpx;
@@ -114,14 +175,16 @@
 		font-size: 20rpx;
 		margin-top: 10rpx;
 	}
+
 	.TopImgs {
 		position: relative;
 		width: 100%;
 		height: 214rpx;
 		margin-top: 10rpx;
 		border-bottom: 1rpx solid #C7C6CD;
-		
+
 	}
+
 	.TopImgsName {
 		position: absolute;
 		top: 15rpx;
@@ -129,6 +192,7 @@
 		left: 0rpx;
 		font-size: 20rpx;
 	}
+
 	.TopImgsAll {
 		display: flex;
 		justify-content: space-between;
@@ -137,12 +201,42 @@
 		right: 0rpx;
 		width: 540rpx;
 		height: 130rpx;
-		border: 1rpx solid black;
+		/* border: 1rpx solid black; */
 	}
-	.TopImgsAll image {
+
+	/* .TopImgsAll image {
 		width: 70rpx;
 		height: 100rpx;
 	}
+	 */
+	.showLeft,
+	.showRight {
+		width: 40rpx;
+		height: 40rpx;
+		margin-top: 45rpx;
+	}
+
+	.showImgs {
+		/* position: relative; */
+		width: 500rpx;
+		height: 130rpx;
+		border: 1rpx solid #C8C7CC;
+		/* overflow-x: scroll; */
+		overflow: hidden;
+	}
+
+	.showImgs image {
+		margin-left: 18rpx;
+		width: 90rpx;
+		height: 130rpx;
+		margin-top: 0rpx;
+	}
+
+
+	/* .showImgs image:nth-of-type(1) {
+		margin-left: 0rpx;
+	} */
+
 	.TopPrice {
 		position: absolute;
 		width: 100%;
@@ -151,6 +245,7 @@
 		top: 138rpx;
 		font-size: 20rpx;
 	}
+
 	.TopTiShi {
 		position: absolute;
 		bottom: 10rpx;
@@ -160,6 +255,7 @@
 		font-size: 20rpx;
 		margin-top: 12rpx;
 	}
+
 	/* body部分 */
 	.BodyMsgs {
 		width: 100%;
@@ -168,13 +264,14 @@
 		border-top: 1rpx solid #C7C6CD;
 		border-bottom: 1rpx solid #C7C6CD;
 	}
-	
+
 	.Body_TopMsg {
 		width: 60%;
 		height: 40rpx;
 		font-size: 26rpx;
 		margin-left: 2%;
 	}
+
 	.Body_LittleMsgs {
 		width: 100%;
 		height: 120rpx;
@@ -183,6 +280,7 @@
 		margin-top: 20rpx;
 		margin-left: 2%;
 	}
+
 	/* 中下部展示 */
 	.Body_Bottom {
 		width: 100%;
@@ -190,6 +288,7 @@
 		border: 1rpx solid #C7C6CD;
 		margin-top: 10rpx;
 	}
+
 	.Body_Bottom_Danhao_Time {
 		width: 100%;
 		height: 80rpx;
@@ -197,6 +296,7 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
 	.Bottom_DanHao {
 		width: 400rpx;
 		height: 80rpx;
@@ -204,6 +304,7 @@
 		font-size: 24rpx;
 		margin-left: 2%;
 	}
+
 	.Bottom_Time {
 		width: 300rpx;
 		height: 80rpx;
@@ -213,6 +314,7 @@
 		margin-right: 2%;
 
 	}
+
 	.Body_LittleMsg {
 		width: 250rpx;
 		height: 80rpx;
@@ -220,9 +322,11 @@
 		text-align: right;
 		font-size: 22rpx;
 	}
+
 	.Body_Bottom_MoreMsg {
 		width: 100%;
 	}
+
 	.MoreMsgs_Ch1 {
 		position: relative;
 		width: 100%;
@@ -230,6 +334,7 @@
 		line-height: 52rpx;
 		margin-top: 12rpx;
 	}
+
 	.MoreMsgsCh1_Name {
 		position: absolute;
 		width: 250rpx;
@@ -240,7 +345,7 @@
 		top: 0rpx;
 		left: 2%;
 	}
-	
+
 	.MoreMsgs_Count {
 		position: absolute;
 		top: 0rpx;
@@ -251,6 +356,7 @@
 		font-size: 22rpx;
 		text-align: center;
 	}
+
 	.MoreMsgs_Price {
 		position: absolute;
 		top: 0rpx;
@@ -261,6 +367,7 @@
 		width: 80rpx;
 		font-weight: bold;
 	}
+
 	.MoreMsgs_YouHui {
 		width: 100%;
 		height: 68rpx;
@@ -268,6 +375,7 @@
 		border-bottom: 1rpx solid #C7C6CD;
 		justify-content: space-between;
 	}
+
 	.MoreMsgs_UseYouHui {
 		width: 200rpx;
 		height: 50rpx;
@@ -277,6 +385,7 @@
 		font-weight: bold;
 		color: #007AFF;
 	}
+
 	.MoreMsgs_JianPrice {
 		width: 140rpx;
 		height: 50rpx;
@@ -286,6 +395,7 @@
 		font-size: 30rpx;
 		color: #007AFF;
 	}
+
 	.Bottom_FuWuCount {
 		width: 96%;
 		height: 70rpx;
@@ -293,20 +403,23 @@
 		margin-left: 2%;
 		justify-content: space-between;
 	}
+
 	.FuWuCount_Name {
 		width: 300rpx;
 		height: 70rpx;
 		line-height: 70rpx;
 		font-size: 22rpx;
 	}
+
 	.FuWuCount_Pirce {
 		width: 200rpx;
 		text-align: right;
 		font-size: 30rpx;
 		height: 70rpx;
-		
+
 		line-height: 70rpx;
 	}
+
 	.Footer {
 		position: fixed;
 		bottom: 0rpx;
@@ -317,6 +430,7 @@
 		display: flex;
 		justify-content: space-between;
 	}
+
 	.True_Pirce {
 		position: relative;
 		height: 108rpx;
@@ -325,6 +439,7 @@
 		line-height: 108rpx;
 		margin-left: 2%;
 	}
+
 	.True_HowPrice {
 		position: absolute;
 		width: 98rpx;
@@ -335,7 +450,7 @@
 		font-weight: bold;
 		font-size: 34rpx;
 	}
-	
+
 	.ZhiFu_Btn {
 		background-color: #0000FF;
 		color: white;
