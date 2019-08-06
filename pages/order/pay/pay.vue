@@ -1,40 +1,35 @@
 <template>
 	<view class="tall">
-		<view class="Nav">
-			<image class="NavImgs" src="../../../static/images/wx.png" mode=""></image>
-			<view class="NavName">微信支付</view>
-			<!-- <input id="NavInput" type="" value="" /> -->
-			<!-- <input type="radio" id="NavInput" value="" /> -->
-			<label class="checkbox" id="NavInput">
-				<checkbox value="" checked="true" />
-			</label>
-		</view>
-		<view class="Nav">
-			<image class="NavImgs" src="../../../static/images/yue.png" mode=""></image>
-			<view class="NavName">余额支付</view>
-			<view class="NavTuijian">
-				<image src="../../../static/images/tuijian.png" mode=""></image>
-			</view>
-			<label class="checkbox" id="NavInput">
-				<checkbox value="" />
-			</label>
-		</view>
-		<view class="Nav">
-			<image class="NavImgs" src="../../../static/images/zfb.png" mode=""></image>
-			<view class="NavName">支付宝支付</view>
-			<label class="checkbox" id="NavInput">
-				<checkbox value="" />
-			</label>
-		</view>
+		<radio-group @change="chooseClass">
+			<radio value="wx" class="Nav">
+				<image class="NavImgs" src="../../../static/images/wx.png" mode=""></image>
+				<view class="NavName">微信支付</view>
+			</radio>
+			<radio value="yue" class="Nav">
+				<image class="NavImgs" src="../../../static/images/yue.png" mode=""></image>
+				<view class="NavName">余额支付</view>
+				<view class="NavTuijian">
+					<image src="../../../static/images/tuijian.png" mode=""></image>
+				</view>
+			</radio>
+			<radio value="zfb" class="Nav">
+				<image class="NavImgs" src="../../../static/images/zfb.png" mode=""></image>
+				<view class="NavName">支付宝支付</view>
+			</radio>
+		</radio-group>
 		<view class="Zhifu">
 			<!-- <input type="radio" id="Zhifuinput" value="" /> -->
-			<label class="checkbox" id="Zhifuinput">
+			<!-- <label class="checkbox" id="Zhifuinput">
 				<checkbox value="" />
+			</label> -->
+			<label class="radio" id="Zhifuinput">
+				<radio value="" />
 			</label>
+			<!-- <Radio class="checkbox"></Radio> -->
 			<view class="aboutMsgs">我已阅读并同意
 				<text>支付协议</text>
 			</view>
-			<view class="Btn">付款</view>
+			<view class="Btn" @click="btns">付款</view>
 		</view>
 	</view>
 </template>
@@ -43,11 +38,19 @@
 	export default {
 		data() {
 			return {
-				
+				cClass:''
 			}
 		},
 		methods: {
-			
+			Status(e) {
+				console.log(e)
+			},
+			chooseClass(e){
+				this.cClass = e.detail.value
+			},
+			btns() {
+				console.log(this.cClass)
+			}
 		}
 	}
 </script>
@@ -57,12 +60,16 @@
 		width: 100%;
 		height: 100%;
 	}
+
 	.Nav {
 		position: relative;
 		width: 100%;
 		height: 130rpx;
+		padding-left: 650rpx;
+		line-height: 130rpx;
 		border: 1rpx solid #C7C6CD;
 	}
+
 	.NavImgs {
 		position: absolute;
 		width: 60rpx;
@@ -70,6 +77,7 @@
 		top: 35rpx;
 		left: 46rpx;
 	}
+	
 	.NavName {
 		position: absolute;
 		width: 158rpx;
@@ -78,6 +86,7 @@
 		top: 25rpx;
 		left: 128rpx;
 	}
+
 	.NavTuijian {
 		position: absolute;
 		height: 80rpx;
@@ -87,13 +96,15 @@
 		left: 262rpx;
 		top: 25rpx;
 	}
-	.NavTuijian image{
+
+	.NavTuijian image {
 		position: absolute;
 		top: 15rpx;
 		left: 0rpx;
 		width: 50rpx;
 		height: 50rpx;
 	}
+
 	#NavInput {
 		position: absolute;
 		top: 40rpx;
@@ -103,12 +114,14 @@
 		/* border: none; */
 		/* border-radius: 50%; */
 	}
+
 	.Zhifu {
 		position: relative;
 		width: 100%;
 		height: 130rpx;
 		border: 1rpx solid #C7C6CD;
 	}
+
 	#Zhifuinput {
 		position: absolute;
 		width: 40rpx;
@@ -116,6 +129,7 @@
 		top: 2rpx;
 		left: 30rpx;
 	}
+
 	.aboutMsgs {
 		position: absolute;
 		top: 10rpx;
@@ -123,9 +137,11 @@
 		width: 354rpx;
 		height: 50rpx;
 	}
+
 	.aboutMsgs text {
 		color: #0A98D5;
 	}
+
 	.Btn {
 		position: absolute;
 		width: 200rpx;
