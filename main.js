@@ -1,13 +1,10 @@
 import Vue from 'vue'
 import App from './App'
-
 import pageHead from './components/page-head.vue'
 import pageFoot from './components/page-foot.vue'
 import uLink from '@/components/uLink.vue'
 import store from './store'
-
 Vue.config.productionTip = false
-
 Vue.prototype.$store = store
 Vue.prototype.$backgroundAudioData = {
 	playing: false,

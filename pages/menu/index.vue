@@ -371,6 +371,7 @@
 		position: relative;
 		width: 100%;
 		height: 100%;
+		overflow: hidden;
 	}
 
 	.menu {
@@ -442,7 +443,7 @@
 	/* 信息展示部分 */
 	.msgsShow {
 		width: 100%;
-		height: 826rpx;
+		height: 700rpx;
 		display: flex;
 		justify-content: space-between;
 		overflow: hidden;

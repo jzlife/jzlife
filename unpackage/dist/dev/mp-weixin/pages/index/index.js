@@ -167,25 +167,25 @@ var qqmapsdk;var _default =
       autoplay: true,
       interval: 2000,
       duration: 1500,
-      adressName: '',
-      locationImg: '../../static/index/dingwei.png',
+      adressName: 'as',
+      locationImg: '../../static/images/lat.png',
       orderNowImg: '../../static/index/star.png',
       cardBagImg: '../../static/index/star.png',
       complimentImg: '../../static/index/star.png',
       adList: [{
         url: "",
-        picture: "../../static/index/lunbo1.png",
+        picture: "../../static/images/1.jpg",
 
         index: 1 },
 
       {
         url: "",
-        picture: "../../static/index/lunbo2.png",
+        picture: "../../static/images/2.jpg",
         index: 2 },
 
       {
         url: "",
-        picture: "../../static/index/lunbo3.png",
+        picture: "../../static/images/3.jpg",
         index: 3 }] };
 
 
@@ -206,6 +206,7 @@ var qqmapsdk;var _default =
 
           success: function success(res) {
             that.adressName = res.result.formatted_addresses.recommend;
+            console.log(that.adressName);
           },
           fail: function fail(err) {
             console.log(err);

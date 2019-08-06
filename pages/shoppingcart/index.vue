@@ -271,7 +271,7 @@
 
 	.footer {
 		position: fixed;
-		bottom: 96rpx;
+		bottom: -1rpx;
 		left: 0rpx;
 		width: 100%;
 		background-color: white;

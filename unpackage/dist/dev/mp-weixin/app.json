@@ -5,34 +5,56 @@
     "pages/index/location",
     "pages/order/index",
     "pages/shoppingcart/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/order/bukuan",
+    "pages/order/waitingGetGoods/waitingGetGoods",
+    "pages/order/GetingGoods/GetingGoods",
+    "pages/order/waitingShip/waitingShip",
+    "pages/order/sendingGoods/sendingGoods",
+    "pages/order/pay/pay",
+    "pages/order/finished/finished",
+    "pages/order/finished/finishedDetail/finishedDetail",
+    "pages/order/finished/finishedDetail/evaluation/evaluation",
+    "pages/shoppingcart/jieSuan/jieSuan",
+    "pages/shoppingcart/jieSuan/preferentialCart/preferentialCart",
+    "pages/shoppingcart/jieSuan/preferentialCart/adjustCart/adjustCart"
   ],
   "subPackages": [],
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#1296db",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
+        "iconPath": "static/images/index.png",
+        "selectedIconPath": "static/images/selectedIndex.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/menu/index",
-        "text": "菜单"
+        "text": "菜单",
+        "iconPath": "static/images/Menu.png",
+        "selectedIconPath": "static/images/selectedMenu.png"
       },
       {
         "pagePath": "pages/order/index",
-        "text": "订单"
+        "text": "订单",
+        "iconPath": "static/images/Ding.png",
+        "selectedIconPath": "static/images/selectedDing.png"
       },
       {
         "pagePath": "pages/shoppingcart/index",
-        "text": "购物车"
+        "text": "购物车",
+        "iconPath": "static/images/Cart.png",
+        "selectedIconPath": "static/images/selectedCart.png"
       },
       {
         "pagePath": "pages/my/index",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "static/images/Mine.png",
+        "selectedIconPath": "static/images/selectedMine.png"
       }
     ]
   },

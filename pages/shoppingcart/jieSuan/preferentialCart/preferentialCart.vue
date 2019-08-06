@@ -107,7 +107,7 @@
 	.Top {
 		width: 100%;
 		height: 80rpx;
-		background: rgba(1,1,1,.2);
+		background: rgba(209, 209, 209, 0.2);
 		text-align: center;
 		line-height: 80rpx;
 		font-size: 24rpx;
@@ -192,10 +192,10 @@
 		position: fixed;
 		bottom: 0rpx;
 		left: 0rpx;
-		height: 80rpx;
+		height: 90rpx;
 		width: 100%;
 		text-align: center;
-		line-height: 80rpx;
+		line-height: 90rpx;
 		color: white;
 		background: #0A98D5;
 		font-size: 34rpx;

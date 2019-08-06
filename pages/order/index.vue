@@ -337,7 +337,7 @@
 	.orderTitle {
 		z-index: 50;
 		position: fixed;
-		top: 80rpx;
+		top: 0rpx;
 		left: 0rpx;
 		width: 100%;
 		height: 104rpx;

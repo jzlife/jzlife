@@ -1,0 +1,105 @@
+
+.tall {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.Nav {
+	/* position: relative; */
+	width: 100%;
+	height: auto;
+	margin-top: 90rpx;
+}
+.GS {
+	width: 60%;
+	margin-left: 20%;
+	height: 80rpx;
+	/* border: 1rpx solid black; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.Goods,.Sad {
+	/* position: absolute; */
+	width: 80rpx;
+	height: 80rpx;
+}
+.Sadshow {
+	position: absolute;
+	width: 80rpx;
+	height: 80rpx;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+.Goods image,.Sadshow image,.Sad image {
+	width: 100%;
+	height: 100%;
+}
+.Sad {
+	/* position: absolute; */
+	width: 80rpx;
+	height: 80rpx;
+}
+.Nav_Msgs {
+	/* position: absolute; */
+	margin-top: 30rpx;
+	margin-left: 5%;
+	width: 90%;
+	height: 280rpx;
+	border: 1rpx solid #999999;
+	color: #3C3E49;
+}
+.Btns {
+	width: 90%;
+	height: 74rpx;
+	border: 1rpx solid #999999;
+	/* position: absolute; */
+	margin-top: 30rpx;
+	margin-left: 5%;
+	font-size: 30rpx;
+	text-align: center;
+	line-height: 74rpx;
+	color: #2C405A;
+}
+.SadMsg {
+	margin-top: 30rpx;
+	width: 80%;
+	height: 484rpx;
+	margin-left: 12%;
+	/* border: 1rpx solid black; */
+}
+.SadMsgCh1 {
+	width: 100%;
+	height: 86rpx;
+	/* border: 1rpx solid red; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	margin-top: 10rpx;
+}
+.SadCh1 {
+	height: 86rpx;
+	width: 520rpx;
+	border: #000000;
+	font-size: 30rpx;
+	border: 1rpx solid #7A7E83;
+	color: #3C3E49;
+}
+.SadMsgCh1 image {
+	width: 50rpx;
+	height: 50rpx;
+	margin-top: 18rpx;
+}
+

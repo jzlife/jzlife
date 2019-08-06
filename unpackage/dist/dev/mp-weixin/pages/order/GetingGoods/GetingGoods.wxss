@@ -1,0 +1,291 @@
+
+.tall {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+.bukuanTop {
+	width: 96%;
+	margin-left: 2%;
+}
+.TopStatus_Thank {
+	width: 50%;
+	height: 100rpx;
+	margin-left: 25%;
+	padding-top: 36rpx;
+}
+.TopStatus {
+	width: 100%;
+	height: 50rpx;
+	line-height: 50rpx;
+	text-align: center;
+	font-size: 30rpx;
+	font-weight: bold;
+}
+.TopThank {
+	width: 100%;
+	height: 40rpx;
+	line-height: 40rpx;
+	text-align: center;
+	font-size: 20rpx;
+	font-weight: bold;
+}
+.TopBeiZhu {
+	width: 100%;
+	height: 24rpx;
+	line-height: 24rpx;
+	font-size: 20rpx;
+	margin-top: 10rpx;
+}
+.TopImgs {
+	position: relative;
+	width: 100%;
+	height: 320rpx;
+	margin-top: 10rpx;
+}
+.QujianCh1 {
+	position: relative;
+	height: 40rpx;
+	line-height: 40rpx;
+	margin-top: 10rpx;
+	font-size: 24rpx;
+}
+.QujianDetailTime {
+	position: absolute;
+	right: 0rpx;
+	top: 0rpx;
+	width: 300rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	text-align: right;
+	font-size: 24rpx;
+}
+.nowContect {
+	position: absolute;
+	top: 0rpx;
+	right: 0rpx;
+	border: 1rpx solid #C7C6CD;
+	border-radius: 10rpx;
+	width: 130rpx;
+	height: 40rpx;
+	line-height: 40rpx;
+	text-align: center;
+	font-size: 24rpx;
+}
+.TopTiShi {
+	position: absolute;
+	bottom: 10rpx;
+	width: 100%;
+	height: 30rpx;
+	line-height: 30rpx;
+	font-size: 20rpx;
+	margin-top: 12rpx;
+}
+/* body部分 */
+.BodyMsgs {
+	width: 100%;
+	height: 170rpx;
+	margin-top: 10rpx;
+	border-top: 1rpx solid #C7C6CD;
+	border-bottom: 1rpx solid #C7C6CD;
+}
+.Body_TopMsg {
+	width: 60%;
+	height: 40rpx;
+	font-size: 26rpx;
+	margin-left: 2%;
+}
+.Body_LittleMsgs {
+	width: 100%;
+	height: 120rpx;
+	line-height: 34rpx;
+	font-size: 24rpx;
+	margin-top: 20rpx;
+	margin-left: 2%;
+}
+/* 中下部展示 */
+.Body_Bottom {
+	width: 100%;
+	height: 372rpx;
+	border: 1rpx solid #C7C6CD;
+	margin-top: 10rpx;
+}
+.Body_Bottom_Danhao_Time {
+	width: 100%;
+	height: 80rpx;
+	border-bottom: 1rpx solid #C7C6CD;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.Bottom_DanHao {
+	width: 400rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	font-size: 24rpx;
+	margin-left: 2%;
+}
+.Bottom_Time {
+	width: 300rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	font-size: 24rpx;
+	text-align: right;
+	margin-right: 2%;
+}
+.Body_LittleMsg {
+	width: 250rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	text-align: right;
+	font-size: 22rpx;
+}
+.Body_Bottom_MoreMsg {
+	width: 100%;
+}
+.MoreMsgs_Ch1 {
+	position: relative;
+	width: 100%;
+	height: 36rpx;
+	line-height: 52rpx;
+	margin-top: 12rpx;
+}
+.MoreMsgsCh1_Name {
+	position: absolute;
+	width: 250rpx;
+	height: 36rpx;
+	line-height: 36rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+	top: 0rpx;
+	left: 2%;
+}
+.MoreMsgs_Count {
+	position: absolute;
+	top: 0rpx;
+	left: 554rpx;
+	width: 60rpx;
+	height: 36rpx;
+	line-height: 36rpx;
+	font-size: 22rpx;
+	text-align: center;
+}
+.MoreMsgs_Price {
+	position: absolute;
+	top: 0rpx;
+	right: 0rpx;
+	height: 36rpx;
+	line-height: 36rpx;
+	font-size: 30rpx;
+	width: 80rpx;
+	font-weight: bold;
+}
+.MoreMsgs_YouHui {
+	width: 100%;
+	height: 68rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	border-bottom: 1rpx solid #C7C6CD;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.MoreMsgs_UseYouHui {
+	width: 200rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	margin-left: 2%;
+	font-size: 30rpx;
+	font-weight: bold;
+	color: #007AFF;
+}
+.MoreMsgs_JianPrice {
+	width: 140rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	text-align: right;
+	margin-right: 2%;
+	font-size: 30rpx;
+	color: #007AFF;
+}
+.Bottom_FuWuCount {
+	width: 96%;
+	height: 70rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-left: 2%;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.FuWuCount_Name {
+	width: 300rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	font-size: 22rpx;
+}
+.FuWuCount_Pirce {
+	width: 200rpx;
+	text-align: right;
+	font-size: 30rpx;
+	height: 70rpx;
+	
+	line-height: 70rpx;
+}
+.Footer {
+	position: fixed;
+	bottom: 0rpx;
+	left: 0rpx;
+	width: 100%;
+	border-top: 1rpx solid #C7C6CD;
+	height: 108rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.True_Pirce {
+	position: relative;
+	height: 108rpx;
+	width: 200rpx;
+	font-size: 28rpx;
+	line-height: 108rpx;
+	margin-left: 2%;
+}
+.True_HowPrice {
+	position: absolute;
+	width: 98rpx;
+	right: -4rpx;
+	top: 0rpx;
+	height: 108rpx;
+	line-height: 112rpx;
+	font-weight: bold;
+	font-size: 34rpx;
+}
+.ZhiFu_Btn {
+	background-color: #0000FF;
+	color: white;
+	width: 204rpx;
+	font-size: 30rpx;
+	font-weight: bold;
+	line-height: 108rpx;
+	text-align: center;
+	height: 18rpx;
+	height: 190rpx;
+}
+

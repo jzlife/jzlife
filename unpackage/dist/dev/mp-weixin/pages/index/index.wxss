@@ -24,8 +24,9 @@ image {
 	color: rgba(16,16,16,1);
 }
 .locaImg{
-	width: 30px;
-	height: 30px;
+	width: 40rpx;
+	height: 40rpx;
+	margin-left: 2%;
 	line-height: 116rpx;
 	display: inline-block;
 	vertical-align: middle;

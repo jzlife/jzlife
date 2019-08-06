@@ -49,24 +49,24 @@
 				interval: 2000,
 				duration: 1500,
 				adressName: 'as',
-				locationImg:'../../static/index/dingwei.png',
+				locationImg:'../../static/images/lat.png',
 				orderNowImg:'../../static/index/star.png',
 				cardBagImg:'../../static/index/star.png',
 				complimentImg:'../../static/index/star.png',
 				adList: [{
 						url: "",
-						picture: "../../static/index/lunbo1.png",
+						picture: "../../static/images/1.jpg",
 
 						index: 1
 					},
 					{
 						url: "",
-						picture: "../../static/index/lunbo2.png",
+						picture: "../../static/images/2.jpg",
 						index: 2
 					},
 					{
 						url: "",
-						picture: "../../static/index/lunbo3.png",
+						picture: "../../static/images/3.jpg",
 						index: 3
 					},
 				],
@@ -137,8 +137,9 @@
 		color: rgba(16,16,16,1);
 	}
 	.locaImg{
-		width: 30px;
-		height: 30px;
+		width: 40rpx;
+		height: 40rpx;
+		margin-left: 2%;
 		line-height: 116rpx;
 		display: inline-block;
 		vertical-align: middle;
