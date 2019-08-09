@@ -770,9 +770,8 @@
 		font-weight: 600;
 	}
 
-	.chooseGoodsMsgs {
-		font-size: 24rpx;
-		font-size: 20rpx;
+	.choooseGoodsMsgs {
+		font-size: 30rpx;
 		width: 100%;
 		overflow: hidden;
 	}
@@ -820,6 +819,7 @@
 		border: 1rpx solid #333333;
 		line-height: 60rpx;
 		color: red;
+		font-size: 30rpx;
 		text-align: center;
 		border-radius: 10rpx;
 	}

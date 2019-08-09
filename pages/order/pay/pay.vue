@@ -82,6 +82,7 @@
 		position: absolute;
 		width: 158rpx;
 		height: 80rpx;
+		font-size: 30rpx;
 		line-height: 80rpx;
 		top: 25rpx;
 		left: 128rpx;
@@ -132,7 +133,8 @@
 
 	.aboutMsgs {
 		position: absolute;
-		top: 10rpx;
+		top: 18rpx;
+		font-size: 30rpx;
 		left: 100rpx;
 		width: 354rpx;
 		height: 50rpx;

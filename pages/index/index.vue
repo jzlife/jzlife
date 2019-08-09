@@ -2,7 +2,7 @@
 	<view class="index">
 		<view class="top">
 			<view class="banner">
-				<swiper class="swiper" :indicator-dots="indicatorDots" :autoplay="autoplay" :interval="interval" :duration="duration">
+				<swiper class="swiper" :indicator-dots="indicatorDots" circular="true" :autoplay="autoplay" :interval="interval" :duration="duration">
 					<swiper-item v-for="(item, index) in adList" :key="index">
 						<a :href="item.url">
 							<image :src="item.picture" mode="scaleToFill"></image>
@@ -12,25 +12,25 @@
 			</view>
 		</view>
 		<!-- 定位 -->
-		<view class="location" @click="correctLocation">
+		<view class="location">
 			<image :src="locationImg" class="locaImg"></image>
 			{{adressName}}
 			<text class="locaText">></text>
 		</view>
 		<!-- 下单 -->
-		<view class="subfieldTitle" @click="jumpToMenu">
+		<view class="subfieldTitle">
 			<text class="subfieldText">现在下单</text>
 			<text class="subfieldText">ORDERNOW</text>
 			<image :src="orderNowImg" class="subfieldImg"></image>
 		</view>
 		<!-- 卡券包 -->
-		<view class="subfieldTitle" @click="jumpToBag">
+		<view class="subfieldTitle">
 			<text class="subfieldText">卡券包</text>
 			<text class="subfieldText">WALLET</text>
 			<image :src="cardBagImg" class="subfieldImg"></image>
 		</view>
 		<!-- 赠送 -->
-		<view class="subfieldTitle" @click="jumpToGift">
+		<view class="subfieldTitle">
 			<text class="subfieldText">卡券包</text>
 			<text class="subfieldText">WALLET</text>
 			<image :src="complimentImg" class="subfieldImg"></image>

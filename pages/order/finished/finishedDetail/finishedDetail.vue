@@ -161,12 +161,14 @@
 		height: 60rpx;
 		border: 1rpx solid #C7C6CD;
 		color: black;
+		font-size: 26rpx;
 		text-align: center;
 		line-height: 60rpx;
 	}
 	.TopChoose_evaluation {
 		width: 134rpx;
 		height: 60rpx;
+		font-size: 26rpx;
 		border: 1rpx solid #C7C6CD;
 		color: #007AFF;
 		text-align: center;
@@ -349,6 +351,7 @@
 		text-align: right;
 		height: 40rpx;
 		line-height: 40rpx;
+		font-size: 24rpx;
 		/* border: 1rpx solid black; */
 		width: 100%;
 	}

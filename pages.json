@@ -2,6 +2,11 @@
 	"pages": [
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "极致生活"
+			}
+		},{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "极致生活"
@@ -109,6 +114,50 @@
             "style" : {
 				"navigationBarTitleText": "调整卡券"
 			}
+        }
+        ,{
+            "path" : "pages/my/myMsg/myMsg",
+            "style" : {
+				"navigationBarTitleText": "我的资料"
+			}
+        },
+		{
+		    "path" : "pages/my/myMsg/updateName",
+		    "style" : {
+				"navigationBarTitleText": "修改昵称"
+			}
+		}
+        ,{
+            "path" : "pages/my/myMsg/address/address",
+            "style" : {
+				"navigationBarTitleText": "我的地址"
+			}
+        }
+        ,{
+            "path" : "pages/my/myMsg/address/updateAddress/updateAddress",
+            "style" : {
+				"navigationBarTitleText": "修改地址"
+			}
+        }
+        ,{
+            "path" : "pages/my/myMsg/address/addAddress/addAddress",
+            "style" : {
+				"navigationBarTitleText": "新增地址"
+			}
+        }
+        ,{
+            "path" : "pages/my/myMsg/address/message/message",
+            "style" : {
+				"navigationBarTitleText": "消息中心"
+			}
+        }
+        ,{
+            "path" : "pages/my/topUpBalance/topUpBalance",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/my/topUpBalance/topUpPrice/topUpPrice",
+            "style" : {}
         }
     ],
 	"tabBar": {

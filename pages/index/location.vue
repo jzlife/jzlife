@@ -1,12 +1,8 @@
 <template>
 	<view class="location">
-		
 		<view class="locaTop">
-			<view class="citySearch" @click="jumpSearchCity" >
-			{{getCityName}}
-			</view>
-			<input class="addressSearch"  @click="jumpSearchAddress" placeholder="小区/写字楼/学校 等">
-			</input>
+			<view class="citySearch">{{getCityName}}</view>
+			<input class="addressSearch" placeholder="小区/写字楼/学校等"></input>
 		</view>
 		<!-- 当前定位 -->
 		<view class="presentLocation">
@@ -14,13 +10,13 @@
 			<view class="preLocaName">
 			{{preLocaName}}
 			</view>
-			<view class="relocation" @click="relocation">重新定位</view>
+			<view class="relocation">重新定位</view>
 		</view>
 		<!-- 取件地址 -->
 		<view class="shippingAddress">
 			<view class="shippingAddressTop">
 				<text class="shipAddressTitle">取件地址</text>
-				<view class="manageAddress" @click="manageAddress">管理地址</view>
+				<view class="manageAddress">管理地址</view>
 			</view>
 			<!-- <view class="addressList" v-for="(item, index) in rooftimeCards">
 				<view class></view>

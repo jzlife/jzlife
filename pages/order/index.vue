@@ -452,6 +452,7 @@
 		right: 10rpx;
 		width: 120rpx;
 		height: 60rpx;
+		font-size: 30rpx;
 		line-height: 60rpx;
 		text-align: right;
 		font-weight: bold;
@@ -461,6 +462,7 @@
 		position: absolute;
 		top: 110rpx;
 		right: 10rpx;
+		font-size: 30rpx;
 		width: 120rpx;
 		height: 60rpx;
 		border: 1rpx solid #929292;
@@ -498,6 +500,7 @@
 		right: 0rpx;
 		width: 120rpx;
 		height: 50rpx;
+		font-size: 26rpx;
 		line-height: 60rpx;
 		text-align: center;
 		color: #929292;

@@ -141,6 +141,7 @@
 		position: absolute;
 		top: 0rpx;
 		left: 60rpx;
+		font-size: 26rpx;
 		height: 40rpx;
 		line-height: 40rpx;
 	}
@@ -393,6 +394,7 @@
 		top: 10rpx;
 		right: 80rpx;
 		height: 60rpx;
+		font-size: 24rpx;
 		line-height: 60rpx;
 		width: 80rpx;
 		text-align: right;
